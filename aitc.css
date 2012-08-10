@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(open_sans_condensed.woff) format('woff');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans Condensed', 'Comic Sans', sans-serif;
+}
+
+h1#header {
+}
