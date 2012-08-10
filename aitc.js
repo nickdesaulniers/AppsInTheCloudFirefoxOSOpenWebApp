@@ -8,14 +8,14 @@
     content.appendChild(error);
     document.getElementById('header').style.color = 'red';
   }
-  function getLargestIconUrl (app) {
+  function getSmallestIconUrl (app) {
     function compare (a, b) {
       let ret = 0;
       const a_int = window.parseInt(a, 10);
       const b_int = window.parseInt(b, 10);
-      if (a_int > b_int) {
+      if (a_int < b_int) {
         ret = -1;
-      } else if (a_int < b_int) {
+      } else if (a_int > b_int) {
         ret = 1;
       }
       return ret;
@@ -25,23 +25,32 @@
     return app.origin + app_icon_urls[key];
   }
   function display (app) {
-    const icon_url = getLargestIconUrl(app);
-    console.log(icon_url);
+    const icon_url = getSmallestIconUrl(app);
+    //console.log(icon_url);
     const app_name = app.manifest.name;
     const app_dev = app.manifest.developer.name;
-    const app_installed;
+    const app_installed = app.status === 'installed';
     const content = document.getElementById('content');
     const listing = document.createElement('div');
     const icon = document.createElement('img');
+    const install_button = document.createElement('input');
+    install_button.setAttribute('type', 'button');
+    install_button.setAttribute('disabled', true);
+    // this shouldn't be hardcoded
+    install_button.setAttribute('value', 'installed');
     icon.setAttribute('alt', 'icon');
     icon.setAttribute('src', icon_url);
     listing.setAttribute('class', 'listing');
-    listing.appendChild(document.createTextNode(app_name + ' by ' + app_dev));
     listing.appendChild(icon);
+    listing.appendChild(document.createTextNode(app_name + ' by ' + app_dev));
+    listing.appendChild(install_button);
     content.appendChild(listing);
   }
   function gotApps (apps) {
     if (apps.length === 0) {
+      // Not going to want to do this, since we can have no apps installed,
+      // but have some in the cloud.  so check the cloud first.
+      // no installed + no cloud = no apps
       errorMsg('You have no apps!');
     } else {
       for each (let app in apps) {
