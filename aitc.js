@@ -1,6 +1,11 @@
+// Notes:
+// - These Preferences need to be set with a patch:
+//   - services.aitc.dashboard.url -> http://localhost/aitc/
+//     otherwise AITC#main wont set user active
+//   - dom.mozApps.whitelist -> http://localhost/aitc/
+//     otherwise navigator.mozApps.mgmt.getAll() calls error callback
 (function (window, document, undefined) {
   function errorMsg (msg) {
-    console.log('in errorMSG');
     const content = document.getElementById('content');
     const error = document.createElement('div');
     error.setAttribute('class', 'error');
@@ -40,7 +45,7 @@
     install_button.setAttribute('value', 'installed');
     icon.setAttribute('alt', 'icon');
     icon.setAttribute('src', icon_url);
-    listing.setAttribute('class', 'listing');
+    listing.setAttribute('class', 'app');
     listing.appendChild(icon);
     listing.appendChild(document.createTextNode(app_name + ' by ' + app_dev));
     listing.appendChild(install_button);
@@ -73,7 +78,20 @@
     }
     errorMsg(msg);
   }
+  function personaReady () {
+    const error_div = document.getElementsByClassName('error')[0];
+    console.log("Persona loaded");
+  }
   function pageLoad () {
+    // http://10.250.64.173:5000
+    // check if services.aitc.dashboard.url pref is set correctly
+    errorMsg('Add ' + window.location +
+      ' to your services.aitc.dashboard.url in about:config and restart ' +
+      'Firefox.');
+    /*navigator.id.watch({
+      onready: personaReady
+    });*/
+
     const pending = navigator.mozApps.mgmt.getAll();
     pending.onsuccess = getAllSuccess;
     pending.onerror = getAllError;
