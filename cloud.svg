@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <filter id="svg_5_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <filter id="svg_3_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <filter id="svg_4_blur">
+   <feGaussianBlur stdDeviation="2" in="SourceGraphic"/>
+  </filter>
+  <radialGradient fy="0.324219" fx="0.328125" r="0.5" cy="0.3" cx="0.3" id="svg_20">
+   <stop stop-color="#ffaaaa" offset="0"/>
+   <stop stop-color="#ff0000" offset="1"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.3" cx="0.3" id="svg_21">
+   <stop stop-color="#ffd4aa" offset="0"/>
+   <stop stop-color="#ff7f00" offset="1"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.3" cx="0.3" id="svg_22">
+   <stop stop-color="#ffffaa" offset="0"/>
+   <stop stop-color="#ffff00" offset="1"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.3" cx="0.3" id="svg_23">
+   <stop stop-color="#aaffaa" offset="0"/>
+   <stop stop-color="#00ff00" offset="1"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.3" cx="0.3" id="svg_24">
+   <stop stop-color="#aaaaff" offset="0"/>
+   <stop stop-color="#0000ff" offset="1"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.3" cx="0.3" id="svg_25">
+   <stop stop-color="#d4aaff" offset="0"/>
+   <stop stop-color="#7f00ff" offset="1"/>
+  </radialGradient>
+  <radialGradient r="0.5" cy="0.3" cx="0.3" id="svg_27">
+   <stop stop-color="#ffffff" offset="0"/>
+   <stop stop-color="#e5e5e5" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>Apps in the Cloud</title>
+  <path filter="url(#svg_3_blur)" id="svg_3" d="m156,120c32,-56 89,-57 120,0c55.333344,-19.666672 98.666656,13.666672 73,73c43,36.333344 18,98.666656 -66,67c-30,59 -95,56 -129,0c-63.333328,25.333344 -113.666672,-16.333313 -70,-71c-28,-70 18,-95 72,-69z" stroke-width="5" stroke="#007fff" fill="#aad4ff"/>
+  <path filter="url(#svg_4_blur)" id="svg_4" d="m340,125c32,-56 89,-57 120,0c55.333008,-19.667007 98.666992,13.667007 73,73c43,36.333008 18,98.666992 -66,67c-30,59 -95,56 -129,0c-63.333008,25.333008 -113.666992,-16.333008 -70,-71c-28,-70 18,-95 72,-69z" stroke-width="5" stroke="#007fff" fill="#aad4ff"/>
+  <path filter="url(#svg_5_blur)" id="svg_5" d="m235,191c32,-56 89,-57 120,0c55.333008,-19.667007 98.666992,13.666992 73,73c43,36.333008 18,98.666992 -66,67c-30,59 -95,56 -129,0c-63.333008,25.333008 -113.666992,-16.333008 -70,-71c-28,-70 18,-95 72,-69z" stroke-width="5" stroke="#007fff" fill="#aad4ff"/>
+  <circle id="svg_6" r="15" cy="224" cx="271" stroke="#7f0000" fill="url(#svg_20)"/>
+  <circle id="svg_7" r="15" cy="263" cx="298" stroke="#666666" fill="url(#svg_27)"/>
+  <circle id="svg_8" r="15" cy="222" cx="325" stroke="#7f3f00" fill="url(#svg_21)"/>
+  <circle id="svg_9" r="15" cy="262" cx="248" stroke="#3f007f" fill="url(#svg_25)"/>
+  <circle id="svg_10" r="15" cy="263" cx="348" stroke="#7f7f00" fill="url(#svg_22)"/>
+  <circle id="svg_11" r="15" cy="303" cx="326" stroke="#007f00" fill="url(#svg_23)"/>
+  <circle id="svg_12" r="15" cy="302" cx="271" stroke="#00007f" fill="url(#svg_24)"/>
+ </g>
+</svg>

@@ -68,6 +68,7 @@
     document.getElementById('header').style.color = 'green';
     gotApps(this.result);
   }
+  // check if dom.mozApps.whitelist is set correctly
   function getAllError () {
     let msg;
     if (this.error && this.error.name === 'DENIED') {
@@ -78,19 +79,12 @@
     }
     errorMsg(msg);
   }
-  function personaReady () {
-    const error_div = document.getElementsByClassName('error')[0];
-    console.log("Persona loaded");
-  }
   function pageLoad () {
-    // http://10.250.64.173:5000
+    // http://10.250.64.173:5000 -> test server for 
     // check if services.aitc.dashboard.url pref is set correctly
-    errorMsg('Add ' + window.location +
-      ' to your services.aitc.dashboard.url in about:config and restart ' +
-      'Firefox.');
-    /*navigator.id.watch({
-      onready: personaReady
-    });*/
+    //errorMsg('Add ' + window.location +
+    //  ' to your services.aitc.dashboard.url in about:config and restart ' +
+    //  'Firefox.');
 
     const pending = navigator.mozApps.mgmt.getAll();
     pending.onsuccess = getAllSuccess;
