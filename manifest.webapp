@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "name": "Apps in the Cloud",
+  "description": "Sync your apps across all of your devices.",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "64": "/icons/icon64.png",
+    "128": "/icons/icon128.png",
+    "256": "/icons/icon256.png"
+  },
+  "developer": {
+    "name": "Mozilla Labs",
+    "url": "http://mozillalabs.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en"
+}
